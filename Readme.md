@@ -1,5 +1,5 @@
 # Blekathlon - Modern, elegant and fast Bludit theme for your blog, portfolio or showcase site
-![screenshot](http://cloud.screenpresso.com/lo4wc/2018-11-10_11h28_15.png
+![screenshot](https://raw.githubusercontent.com/blthemes/Blekathlon/master/img/blekathlon-scr.jpg
  "Blekathlon")
 
 For some features require our [BlThemes Plugin](https://blthemes.pp.ua/#plugins)

@@ -49,8 +49,7 @@
 
             <nav class="menu-social social-navigation menu clear" role="navigation" aria-label="Social Menu">
                 <div class="social-menu-wrapper clear">
-                    <ul class="menu-social-items">
-                        <!-- Social Networks -->
+                    <ul class="menu-social-items">                       
                         <?php if ($site->github()) : ?>
                         <li class="menu-item">
                             <a class="nav-link" href="<?php echo $site->github() ?>" target="_blank">

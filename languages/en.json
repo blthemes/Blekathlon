@@ -1,0 +1,14 @@
+{
+  "theme-data": {
+    "name": "Blekathlon",
+    "description": "Modern, elegant and fast Bludit theme for your blog, portfolio or showcase site"
+  },
+  "menu": "Menu",
+  "blog": "Blog",
+  "continue-reading": "Continue reading",
+  "type-to-start-searching": "Type to start searching",
+  "search": "Search",
+  "latest-posts": "Latest posts",
+  "related-posts": "Related posts",
+  "pages": "Pages"
+}

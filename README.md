@@ -1,8 +1,6 @@
 # Blekathlon - Modern, elegant and fast Bludit theme for your blog, portfolio or showcase site
-![screenshot](https://blthemes.pp.ua/images/blekathlon.jpg
+![screenshot](https://blthemes.pp.ua/blekathlon/bl-content/uploads/blekathlon.png
  "Blekathlon")
-
-For some features require our [BlThemes Plugin](https://blthemes.pp.ua/#plugins)
 
 [Live Demo](https://blthemes.pp.ua/blekathlon/)
 

@@ -19,7 +19,7 @@
 
     <?php include(THEME_DIR_PHP.'footer.php'); ?>
 
-	<?php echo Theme::javascript('js/bundle.min.js'); ?>    
+    <?php echo Theme::javascript('js/bundle.min.js'); ?>    
 
     <?php Theme::plugins('siteBodyEnd'); ?>
 

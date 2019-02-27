@@ -53,7 +53,7 @@
                               echo  $page->description();
                           }
                           else{
-                              echo Helper::content2description($page->content(false));
+                              echo $helper->content2excerpt($page->content(false));
                           }
                     ?>
 				</div>

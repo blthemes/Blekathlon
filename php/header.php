@@ -3,19 +3,21 @@
 	<input class="search-toggle" type="checkbox" id="search-toggle" />
 	<div class="wrapper main-width search-header">
 		<div class="site-branding">
-			<h1 class="site-title title-font no-margin-bottom">
+			<div class="site-title title-font no-margin-bottom">
 				<a class="navbar-brand" href="<?php echo $site->url(); ?>" rel="home">
-					<span class="text-white">
-						<?php echo $site->title(); ?>
-					</span>
-					<span>
+					<?php if( method_exists($site, 'logo') &&  $site->logo() ):?>
+						<img class="site-logo" src="<?php echo $helper->cdn_that_image($site->logo(),130); ?>" alt="<?php echo $site->title()?>" />
+					<?php else: ?>
+						<span class="text-white">
+							<?php echo $site->title(); ?>
+						</span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 16 16">
 							<path d="M4.1 8c0 2.1 1.7 3.9 3.9 3.9 2.1 0 3.9-1.7 3.9-3.9 0-2.1-1.7-3.9-3.9-3.9 -2.1 0-3.9 1.7-3.9 3.9Z" fill="#ff1654"></path>
 							<path d="M1.6 8.7c0.3 3 2.7 5.3 5.6 5.6l0 1.5c-3.8-0.3-6.8-3.3-7.1-7.1l1.5 0Zm14.2 0c-0.3 3.8-3.3 6.8-7.1 7.1l0-1.5c3-0.3 5.3-2.7 5.6-5.6l1.5 0Zm-7.1-7.1c3 0.3 5.3 2.7 5.6 5.6l1.5 0c-0.3-3.8-3.3-6.8-7.1-7.1l0 1.5Zm-7.1 5.6c0.3-3 2.7-5.3 5.6-5.6l0-1.5c-3.8 0.3-6.8 3.3-7.1 7.1l1.5 0Z"></path>
 						</svg>
-					</span>
+					<?php endif; ?>				
 				</a>
-			</h1>
+			</div>
 		</div>
 		<div class="main-navigation-wrapper" id="main-navigation-wrapper">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -41,14 +43,14 @@
 				</ul>
 			</nav>
 		</div>
-		<?php if (pluginActivated('pluginBlThemes')): ?>
+
 		<label class="search-header-nav-button" for="search-toggle">
 			<svg class="svg-search" viewBox="0 0 32 32" stroke-width="2">
 				<circle cx="14" cy="14" r="12"></circle>
 				<path d="M23 23 L30 30"></path>
 			</svg>
 		</label>
-		<?php endif; ?>
+
 		<button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
 			<span class="menu-toggle-svg-wrapper" id="menu-toggle-svg-wrapper">
 				<svg class="icon icon-menu-toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -59,9 +61,11 @@
 					</g>
 				</svg>
 			</span>
-			<span class="menu-toggle-text screen-reader-text" id="menu-toggle-text"><?php echo $L->get('Menu'); ?></span>
+			<span class="menu-toggle-text screen-reader-text" id="menu-toggle-text">
+				<?php echo $L->get('Menu'); ?>
+			</span>
 		</button>
-		<?php if (pluginActivated('pluginBlThemes')): ?>
+
 		<div class="search-wrapper">
 			<label class="search-overlay" for="search-toggle"></label>
 			<div class="search-inner" role="search">
@@ -93,7 +97,7 @@
 			</div>
 
 		</div>
-		<?php endif; ?>
+
 	</div>
 </header>
 <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -109,10 +113,7 @@
 		</symbol>
 		<symbol id="icon-facebook" viewBox="0 0 32 32">
 			<path d="M17.5 31.6l0-14.2 4.5 0 0.6-5.5 -5.2 0 0-3.5c0-1.6 0.4-2.7 2.6-2.7l2.8 0 0-4.9c-0.5-0.1-2.1-0.2-4-0.2 -4 0-6.7 2.5-6.7 7.3l0 4 -4.5 0 0 5.5 4.5 0 0 14.2 5.4 0Z"></path>
-		</symbol>
-		<symbol id="icon-googleplus" viewBox="0 0 32 32">
-			<path d="M19.7 14.2l0.2 1.9c0 5.8-3.7 10-9.4 10 -5.4 0-9.8-4.6-9.8-10.2 0-0.1 0-0.2 0-0.3 0-5.5 4.4-10 9.7-10 2.5 0 4.9 1 6.7 2.8l-2.7 2.6c-0.7-0.7-2-1.5-3.9-1.5 -3.3 0-5.9 2.9-5.9 6.4 0 3.5 2.7 6.4 6 6.4 3.9 0 5.4-2.9 5.6-4.4l-5.6 0 0-3.8 9.3 0Zm8.2 0.2l3.4 0 0 2.6 -3.4 0 0 3.8 -2.6 0 0-3.8 -3.9 0 0-2.6 3.9 0 0-3.6 2.6 0 0 3.6Z"></path>
-		</symbol>
+		</symbol>		
 		<symbol id="icon-codepen" viewBox="0 0 32 32">
 			<path d="M32 11l0 0 0 0c0 0 0 0 0 0 0 0 0 0 0 0l0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15-10c0 0-1 0-2 0l-15 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0c0 0 0 0 0 0l0 0 0 0c0 0 0 0 0 0l0 0c0 0 0 0 0 0l0 10c0 0 0 0 0 0l0 0c0 0 0 0 0 0l0 0c0 0 0 0 0 0l0 0c0 0 0 0 0 0l0 0c0 0 0 0 0 0l0 0 0 0c0 0 0 0 0 0l0 0 0 0 0 0 15 10c0 0 1 0 1 0 0 0 1 0 1 0l15-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0-10c0 0 0 0 0 0l0 0 0 0 0 0Zm-16 8l-5-3 5-3 5 3 -5 3 0 0Zm-1-9l-6 4 -5-3 11-7 0 6 0 0Zm-8 6l-3 2 0-5 3 2 0 0Zm2 2l6 4 0 6 -11-7 5-3 0 0 0 0Zm9 4l6-4 5 3 -11 7 0-6 0 0Zm8-6l3-2 0 5 -3-2 0 0Zm-2-2l-6-4 0-6 11 7 -5 3 0 0Z"></path>
 		</symbol>

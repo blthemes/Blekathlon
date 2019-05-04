@@ -140,21 +140,20 @@
 				</div>
 			</nav>
 			<?php endif?>
-			<?php
-			$related = $helper->getRelated();
-			if($related):?>
+			<?php			
+			if($related = $helper->getRelated()):?>
 			<div class="related-items">
 				<h3><?php echo $L->get('Related posts'); ?></h3>
 				<?php foreach($related as $relpage): ?>
 				<div class="rel-item">
-					<a href="<?php echo $relpage['link']; ?>"></a>
-					<?php if($relpage['thumb']): ?>
+					<a href="<?php echo $relpage->permalink(); ?>"></a>
+					<?php if($relpage->thumbCoverImage()): ?>
 					<div class="rel-item__icon">
-						<img src="<?php echo $helper->cdn_cover_image( $relpage['thumb'],60,60); ?>" />
+						<img src="<?php echo $helper->cdn_cover_image( $relpage->thumbCoverImage(),60,60); ?>" />
 					</div>					
 					<?php endif ?>
 					<div class="rel-item__title">
-						<?php echo $relpage['title'] ?>
+						<?php echo $relpage->title() ?>
 					</div>
 				</div>
 				<?php endforeach;?>

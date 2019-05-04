@@ -6,8 +6,8 @@
   "menu": "Menu",
   "blog": "Blog",
   "continue-reading": "Continue reading",
-  "type-to-start-searching": "Type to start searching",
-  "search": "Search",
+  "type-to-start-searching": "Type at least 3 characters to search",
+  "search": " Search",
   "latest-posts": "Latest posts",
   "related-posts": "Related posts",
   "pages": "Pages"

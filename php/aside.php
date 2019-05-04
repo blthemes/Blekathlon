@@ -52,20 +52,20 @@
             <nav class="menu-social social-navigation menu clear" role="navigation" aria-label="Social Menu">
                 <div class="social-menu-wrapper clear">
                     <ul class="menu-social-items">
-                        <!-- Social Networks -->
+						<!-- Social Networks -->
 						<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
-                        <li class="menu-item">
+						<li class="menu-item">
 							<a class="<?php echo $key?> nav-link" href="<?php echo $site->{$key}(); ?>" target="_blank" rel="nofollow noreferrer">
 							    <span class="screen-reader-text"><?php echo $label; ?></span>
 								 <svg class="icon icon-<?php echo $key?>" aria-hidden="true" role="img">
                                     <use xlink:href="#icon-<?php echo $key?>"></use>
                                 </svg>								
-                            </a>
-                        </li>
+							</a>
+						</li>
 						<?php endforeach; ?>    
                     </ul>
                 </div>
-            </nav>
+            </nav>			
         </div>
     </div>
 </aside>

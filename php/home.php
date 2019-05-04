@@ -105,6 +105,7 @@
 			</div>
 		</nav>
 		<?php endif ?>
+		<?php //Theme::plugins('pageEnd'); ?>
 	</main>
 </div>
-<?php Theme::plugins('pageEnd'); ?>
+

@@ -40,7 +40,9 @@
 					<?php
                               endif;
                           endforeach; ?>
-				</ul>
+				</ul>				
+			     <?php Theme::plugins('siteSidebar') ?>              
+           
 			</nav>
 		</div>
 
@@ -89,6 +91,11 @@
 						<div class="search-result" data-component="result">
 							<div class="search-result-meta">
 								<?php echo $L->get('Type to start searching') . PHP_EOL ?>
+								<script>
+									var translations ={
+									  "type-to-start-searching": "<?php echo $L->get('Type to start searching')?>",
+								    };
+								</script>
 							</div>
 							<ol class="search-result-list"></ol>
 						</div>

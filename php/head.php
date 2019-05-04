@@ -9,4 +9,4 @@
 <?php echo Theme::css('css/style.min.css'); ?>
 <?php Theme::plugins('siteHead'); ?>
 
-<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Roboto:400,400i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Roboto:400,400i,700" rel="stylesheet" />

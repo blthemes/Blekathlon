@@ -8,6 +8,13 @@ BlThemes - Themes for [Bludit](https://github.com/bludit/bludit) CMS version 3+
 
 ## Changelog
 
+v3.9.0
+
+* Added Medium style Image Zoom to Article images. [Demo](https://blthemes.pp.ua/blekathlon/medium-style-zoom)
+* Search results are cached for one hour only.
+* Downloads moved to [Gumroad](https://blthemes.pp.ua/blekathlon/blekathlon-info). 
+* Fixed issues with [search](https://github.com/blthemes/Blekathlon/issues/8).
+
 v3.8.1  
 
 * IMPORTANT: Due to some user complaints, the use of CDN for images and image resizing has been disabled. If you want to use it again in `init.php` change this line:

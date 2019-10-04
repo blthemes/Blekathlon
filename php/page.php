@@ -11,7 +11,7 @@
 					<svg class="icon" viewBox="0 0 32 32">
 						<use xlink:href="#icon-pencil"></use>
 					</svg>
-					<span>Edit</span>
+					<span><?php echo $L->get('Edit'); ?></span>
 				</a>
 				<?php endif; ?>
 			</header>
@@ -47,14 +47,14 @@
 						<svg class="c-share-icon  c-share-icon-twitter">
 							<use xlink:href="#icon-twitter"></use>
 						</svg>
-						Tweet
+						<?php echo $L->get('Tweet'); ?>
 					</a>
 					<a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode ($page->permalink()) ?>&amp;t=<?php echo urlencode($page->description()) ?>"
 						rel="noopener noreferrer external nofollow" class="c-btn-share  c-btn-facebook" target="_blank">
 						<svg class="c-share-icon  c-share-icon-facebook">
 							<use xlink:href="#icon-facebook"></use>
 						</svg>
-						Share
+						<?php echo $L->get('Share'); ?>
 					</a>
 				</div>
 				<?php if ($page->category()): ?>
@@ -96,7 +96,7 @@
             if( $prevKey || $nextKey):
             ?>
 			<nav class="navigation post-navigation" role="navigation">
-				<h2 class="screen-reader-text">Post navigation</h2>
+				<h2 class="screen-reader-text"><?php echo $L->get('Post navigation'); ?></h2>
 				<div class="nav-links">
 					<?php
                 if($prevKey):
@@ -107,9 +107,9 @@
 							<span class="meta-nav" aria-hidden="true">
 								<svg class="icon icon-arrow-circle-left" aria-hidden="true" role="img" viewBox="0 0 27 32">
 									<path d="M23 17v-2q0 0 0-1t-1 0h-9l3-3q0 0 0-1t0-1l-2-2q0 0-1 0t-1 0l-8 8q0 0 0 1t0 1l8 8q0 0 1 0t1 0l2-2q0 0 0-1t0-1l-3-3h9q0 0 1 0t0-1zM27 16q0 4-2 7t-5 5-7 2-7-2-5-5-2-7 2-7 5-5 7-2 7 2 5 5 2 7z"></path>
-								</svg>Previous
+								</svg><?php echo $L->get('Previous'); ?>
 							</span>
-							<span class="screen-reader-text">Previous post:</span>
+							<span class="screen-reader-text"><?php echo $L->get('Previous post:'); ?></span>
 							<span class="post-title">
 								<?php echo  $prevPage->title() ?>
 							</span>
@@ -125,12 +125,12 @@
 					<div class="nav-next">
 						<a href="<?php echo $nextPage->permalink() ?>" rel="next">
 							<span class="meta-nav" aria-hidden="true">
-								Next
+								<?php echo $L->get('Next'); ?>
 								<svg class="icon icon-arrow-circle-right" aria-hidden="true" role="img" viewBox="0 0 27 32">
 									<path d="M23 16q0 0 0-1l-8-8q0 0-1 0t-1 0l-2 2q0 0 0 1t0 1l3 3h-9q0 0-1 0t0 1v2q0 0 0 1t1 0h9l-3 3q0 0 0 1t0 1l2 2q0 0 1 0t1 0l8-8q0 0 0-1zM27 16q0 4-2 7t-5 5-7 2-7-2-5-5-2-7 2-7 5-5 7-2 7 2 5 5 2 7z"></path>
 								</svg>
 							</span>
-							<span class="screen-reader-text">Next post:</span>
+							<span class="screen-reader-text"><?php echo $L->get('Next post:'); ?></span>
 							<span class="post-title">
 								<?php echo $nextPage->title() ?>
 							</span>
